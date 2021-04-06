@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  artist_name: MyString
+  role: MyString
+  genre: MyString
+  bio: MyString
+  location: MyString
+  tags: MyString
+
+two:
+  name: MyString
+  artist_name: MyString
+  role: MyString
+  genre: MyString
+  bio: MyString
+  location: MyString
+  tags: MyString
