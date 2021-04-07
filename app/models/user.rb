@@ -8,4 +8,10 @@ class User < ApplicationRecord
 
     has_many :liking_users, foreign_key: :liked_id, class_name: "Like"
     has_many :likers, through: :liking_users
+
+    has_many :second_liked_users, foreign_key: :first_id, class_name: 'Match'
+    has_many :second, through: :second_liked_users
+
+    has_many :first_liked_users, foreign_key: :second_id, class_name: 'Match'
+    has_many :first, through: :first_liked_users
 end
