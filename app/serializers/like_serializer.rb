@@ -1,5 +1,5 @@
 class LikeSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :match
 
   belongs_to :liker
   belongs_to :liked

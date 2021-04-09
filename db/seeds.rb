@@ -60,11 +60,10 @@ hi_demo3 = Demo.create(title: "Real Friends", user: user_hi)
 
 # Likes
 
-tim_james_like = Like.create(liker: user_tim, liked: user_james)
-james_tim_like = Like.create(liker: user_james, liked: user_tim)
-tim_james_match = Match.create(first: user_tim, second: user_james)
+tim_james_like = Like.create(liker_id: user_tim.id, liked_id: user_james.id, match: true)
 
-john_tim_like = Like.create(liker: user_john, liked: user_tim)
+
+john_tim_like = Like.create(liker_id: user_john.id, liked_id: user_tim.id, match: false)
 
 
 

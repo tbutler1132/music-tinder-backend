@@ -1,7 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
 
-    has_many :demos 
+    has_many :demos
+    has_many :likes
     
     has_many :liked_users, foreign_key: :liker_id, class_name: 'Like'
     has_many :liked, through: :liked_users
@@ -14,4 +15,10 @@ class User < ApplicationRecord
 
     has_many :first_liked_users, foreign_key: :second_id, class_name: 'Match'
     has_many :first, through: :first_liked_users
+
+    def matches
+        @likes = self.liking_users.concat(self.liked_users)
+        @likes.where("match")
+    end
+
 end
