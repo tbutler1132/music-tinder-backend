@@ -58,13 +58,17 @@ hi_demo = Demo.create(title: "still falling", user: user_hi)
 hi_demo2 = Demo.create(title: "All Day", user: user_hi)
 hi_demo3 = Demo.create(title: "Real Friends", user: user_hi)
 
+
+tim_james_match = Match.create(user_id: user_tim.id, liker_id: user_james.id)
+tim_james_match = Match.create(user_id: user_tim.id, liker_id: user_chloe.id, confirmed: true)
+
 # Likes
 
-tim_james_like = Like.create(liker: user_tim, liked: user_james)
-james_tim_like = Like.create(liker: user_james, liked: user_tim)
-tim_james_match = Match.create(first: user_tim, second: user_james)
+# tim_james_like = Like.create(liker: user_tim, liked: user_james)
+# james_tim_like = Like.create(liker: user_james, liked: user_tim)
+# tim_james_match = Match.create(first: user_tim, second: user_james)
 
-john_tim_like = Like.create(liker: user_john, liked: user_tim)
+# john_tim_like = Like.create(liker: user_john, liked: user_tim)
 
 
 
