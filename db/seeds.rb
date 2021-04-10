@@ -1,7 +1,6 @@
 User.destroy_all
 Demo.destroy_all
 Like.destroy_all
-Match.destroy_all
 
 #Users
 
@@ -59,13 +58,14 @@ hi_demo2 = Demo.create(title: "All Day", user: user_hi)
 hi_demo3 = Demo.create(title: "Real Friends", user: user_hi)
 
 
-tim_james_match = Match.create(user_id: user_tim.id, liker_id: user_james.id)
-tim_james_match = Match.create(user_id: user_tim.id, liker_id: user_chloe.id, confirmed: true)
 
-# Likes
 
-# tim_james_like = Like.create(liker: user_tim, liked: user_james)
-# james_tim_like = Like.create(liker: user_james, liked: user_tim)
+#Likes
+
+tim_james_like = Like.create(liker: user_tim, liked: user_james, match: false)
+
+jamal_tim_like = Like.create(liker: user_jamal, liked: user_tim, match: false)
+
 # tim_james_match = Match.create(first: user_tim, second: user_james)
 
 # john_tim_like = Like.create(liker: user_john, liked: user_tim)
