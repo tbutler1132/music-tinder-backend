@@ -1,6 +1,5 @@
 class MatchSerializer < ActiveModel::Serializer
-  attributes :id, :first_id, :second_id
-
-  belongs_to :first
-  belongs_to :second
+  attributes :id, :status
+  has_one :sent_to
+  has_one :sent_by
 end

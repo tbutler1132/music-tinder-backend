@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :matches
   resources :demos
   resources :likes
-  resources :users
+  
+  resources :users do
+    resources :matches
+  end
   
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'

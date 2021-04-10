@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_08_190857) do
+ActiveRecord::Schema.define(version: 2021_04_10_173227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,10 +66,13 @@ ActiveRecord::Schema.define(version: 2021_04_08_190857) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "first_id"
-    t.integer "second_id"
+    t.bigint "sent_to_id", null: false
+    t.bigint "sent_by_id", null: false
+    t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["sent_by_id"], name: "index_matches_on_sent_by_id"
+    t.index ["sent_to_id"], name: "index_matches_on_sent_to_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -97,4 +100,6 @@ ActiveRecord::Schema.define(version: 2021_04_08_190857) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "matches", "users", column: "sent_by_id"
+  add_foreign_key "matches", "users", column: "sent_to_id"
 end

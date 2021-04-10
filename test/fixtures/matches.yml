@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_id: 1
-  second_id: 1
+  sent_to: one
+  sent_by: one
+  status: false
 
 two:
-  first_id: 1
-  second_id: 1
+  sent_to: two
+  sent_by: two
+  status: false
