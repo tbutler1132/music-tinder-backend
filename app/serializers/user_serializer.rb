@@ -5,9 +5,8 @@ class UserSerializer < ActiveModel::Serializer
   has_many :likers
   has_many :liked
 
-  # def matches
-  #   object.likers.concat(object.liked) {|liker| liker = liker.id}
-  # end
+  has_many :initiated_conversations
+  has_many :received_conversations
   
   # has_many :first
   # has_many :second

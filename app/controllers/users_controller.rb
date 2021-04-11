@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        render json: users, except: [:updated_at, :created_at]
+        shuffledUsers = users.shuffle
+        render json: users
     end
 
     def create
