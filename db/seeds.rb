@@ -1,7 +1,8 @@
 User.destroy_all
 Demo.destroy_all
 Like.destroy_all
-Match.destroy_all
+Conversation.destroy_all
+Message.destroy_all
 
 #Users
 
@@ -67,8 +68,23 @@ james_tim_like = Like.create(liker_id: user_james.id, liked_id: user_tim.id, mat
 
 john_tim_like = Like.create(liker_id: user_john.id, liked_id: user_tim.id, match: false)
 
+lamar_tim_like = Like.create(liker_id: user_lamar.id, liked_id: user_tim.id, match: false)
+
+tim_james_conversation = Conversation.create(sender_id: user_tim.id, reciever_id: user_james.id)
+
+tim_james_message = Message.create(content: "Hey", conversation: tim_james_conversation, user: user_tim)
+
+james_tim_message = Message.create(content: "Sup", conversation: tim_james_conversation, user: user_james)
 
 
+tim_lamar_conversation = Conversation.create(sender_id: user_tim.id, reciever_id: user_lamar.id)
+
+tim_lamar_message = Message.create(content: "Yo", conversation: tim_lamar_conversation, user: user_tim)
+
+lamar_tim_message = Message.create(content: "Whats good", conversation: tim_lamar_conversation, user: user_lamar)
+
+
+tim_kan_conversation = Conversation.create(sender_id: user_kan.id, reciever_id: user_tim.id)
 
 
 
