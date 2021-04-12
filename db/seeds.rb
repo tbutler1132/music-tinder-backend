@@ -6,22 +6,74 @@ Message.destroy_all
 
 #Users
 
-user_tim = User.create(name: "Tim", artist_name: "The Mute Spittah", role: "Rapper", genre: "Acapella", bio: "I spit hot fiya", location: "NY", tags: "Hot", email: "tbutler1132@gmail.com", password: "1234")
-user_james = User.create(name: "James", artist_name: "Holla", role: "Rapper", genre: "Experimental", bio: "I fiya", location: "Mia", tags: "Cold", email: "1234", password: "1234")
-user_john = User.create(name: "John", artist_name: "Dame", role: "Rapper", genre: "Trap", bio: "Ia", location: "CA", tags: "Cold", email: "1234", password: "1234")
-user_jim = User.create(name: "Jim", artist_name: "Seev", role: "Rapper", genre: "G-funk", bio: "fiya", location: "MA", tags: "Cold", email: "1234", password: "1234")
-user_steve = User.create(name: "Steve", artist_name: "Th", role: "Rapper", genre: "Boom Bap", bio: "iya", location: "SD", tags: "Cold", email: "1234", password: "1234")
-user_kan = User.create(name: "Kan", artist_name: "fdsfs", role: "Rapper", genre: "Electronic", bio: "a", location: "Jac", tags: "Cold", email: "1234", password: "1234")
-user_jamal = User.create(name: "Jamal", artist_name: "ffff", role: "Rapper", genre: "Alternative", bio: " ya", location: "Phi", tags: "Cold", email: "1234", password: "1234")
-user_lamar = User.create(name: "Lamar", artist_name: "asdf", role: "Rapper", genre: "West Coast", bio: "Iya", location: "NY", tags: "Cold", email: "1234", password: "1234")
-user_chloe = User.create(name: "Chloe", artist_name: "hjgjg", role: "Rapper", genre: "Soul", bio: "a", location: "Sev", tags: "Cold", email: "1234", password: "1234")
-user_hi = User.create(name: "Hi", artist_name: "gdgdfgf", role: "Rapper", genre: "Acapella", bio: "Iiya", location: "Mia", tags: "Cold", email: "1234", password: "1234")
+user_tim = User.create(name: "Tim", artist_name: "The Mute Spittah", role: "Rapper", genre: "Acapella", bio: "I spit hot fiya", location: "NY", tags: ["Hot", "fire"], email: "tbutler1132@gmail.com", password: "1234")
+user_james = User.create(name: "James", artist_name: "Holla", role: "Rapper", genre: "Experimental", bio: "I fiya", location: "Mia", tags: ["Cold"], email: "1234", password: "1234")
+user_john = User.create(name: "John", artist_name: "Dame", role: "Rapper", genre: "Trap", bio: "Ia", location: "CA", tags: ["Cold"], email: "1234", password: "1234")
+user_jim = User.create(name: "Jim", artist_name: "Seev", role: "Rapper", genre: "G-funk", bio: "fiya", location: "MA", tags: ["Cold"], email: "1234", password: "1234")
+user_steve = User.create(name: "Steve", artist_name: "Th", role: "Rapper", genre: "Boom Bap", bio: "iya", location: "SD", tags: ["Cold"], email: "1234", password: "1234")
+user_kan = User.create(name: "Kan", artist_name: "fdsfs", role: "Rapper", genre: "Electronic", bio: "a", location: "Jac", tags: ["Cold"], email: "1234", password: "1234")
+user_jamal = User.create(name: "Jamal", artist_name: "ffff", role: "Rapper", genre: "Alternative", bio: " ya", location: "Phi", tags: ["Cold"], email: "1234", password: "1234")
+user_lamar = User.create(name: "Lamar", artist_name: "asdf", role: "Rapper", genre: "West Coast", bio: "Iya", location: "NY", tags: ["Cold"], email: "1234", password: "1234")
+user_chloe = User.create(name: "Chloe", artist_name: "hjgjg", role: "Rapper", genre: "Soul", bio: "a", location: "Sev", tags: ["Cold"], email: "1234", password: "1234")
+user_hi = User.create(name: "Hi", artist_name: "gdgdfgf", role: "Rapper", genre: "Acapella", bio: "Iiya", location: "Mia", tags: ["Cold"], email: "1234", password: "1234")
+
+#Avatars
+
+user_tim.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_james.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_john.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_jim.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_steve.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_kan.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_jamal.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_lamar.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_chloe.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
+
+user_hi.avatar.attach(
+    io: File.open('public/images/51ZYDQjsLVL._AC_.jpg'),
+    filename: '51ZYDQjsLVL._AC_.jpg',
+)
 
 #Demos
 
 tim_demo = Demo.create(title: "still falling", user: user_tim)
 tim_demo2 = Demo.create(title: "All Day", user: user_tim)
-tim_demo3 = Demo.create(title: "Real Friends", user: user_tim)
+
 
 james_demo = Demo.create(title: "still falling", user: user_james)
 james_demo2 = Demo.create(title: "All Day", user: user_james)
@@ -77,16 +129,6 @@ tim_james_message = Message.create(content: "Hey", conversation: tim_james_conve
 james_tim_message = Message.create(content: "Sup", conversation: tim_james_conversation, user: user_james)
 
 
-tim_lamar_conversation = Conversation.create(sender_id: user_tim.id, reciever_id: user_lamar.id)
-
-tim_lamar_message = Message.create(content: "Yo", conversation: tim_lamar_conversation, user: user_tim)
-
-lamar_tim_message = Message.create(content: "Whats good", conversation: tim_lamar_conversation, user: user_lamar)
-
-
-tim_kan_conversation = Conversation.create(sender_id: user_kan.id, reciever_id: user_tim.id)
-
-
 
 #Files
 
@@ -100,10 +142,7 @@ tim_demo2.audio_data.attach(
     filename: 'still_falling.mp3',
 )
 
-tim_demo3.audio_data.attach(
-    io: File.open('./public/audio/Real_friends.mp3'),
-    filename: 'still_falling.mp3',
-)
+
 
 james_demo.audio_data.attach(
     io: File.open('./public/audio/still_falling.mp3'),

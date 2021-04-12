@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
   
-resources :messages, only: [:index, :create]
-mount ActionCable.server => '/cable'
-
+  
+  resources :messages
 
   resources :matches
-  resources :demos
   resources :likes
-  
-  resources :users do
-    resources :matches
-  end
+  resources :demos
+  resources :users 
   
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
 
-  post 'rails/active_storage/direct_uploads', to: 'direct_uploads#create'
+  post 'rails/active_storage/direct_upload', to: 'direct_upload#create'
 end

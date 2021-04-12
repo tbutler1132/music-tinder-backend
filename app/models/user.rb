@@ -27,13 +27,15 @@ class User < ApplicationRecord
     has_many :initiated_conversations, foreign_key: :sender_id, class_name: 'Conversation'
     has_many :received_conversations, foreign_key: :reciever_id, class_name: 'Conversation'
 
+    has_one_attached :avatar
+
     # def match?(user)
     #     likers = self.likers
     #     liked = self.liked
     #     likers.include?(user) && liked.include?(user)
     # end
 
-    def matches
+    def match
         likers = self.likers
         liked = self.liked
         matches = likers.filter {|user| liked.include?(user)}
