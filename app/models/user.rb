@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
     has_many :demos
 
+    has_one :favorite_track
+
 
 
     # has_many :likes

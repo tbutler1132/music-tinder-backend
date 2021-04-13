@@ -69,6 +69,10 @@ user_hi.avatar.attach(
     filename: '51ZYDQjsLVL._AC_.jpg',
 )
 
+#favorite songs
+
+user_tim_faorite_song = FavoriteTrack.create(user: user_tim, name: "hurry", artist: "Keyon Christ", image: "https://i.scdn.co/image/ab67616d0000b2738f3ee61241342602986659cd", spotify_id: "1CcwlUd4mEkNxRyLLxZt5u", preview: "https://p.scdn.co/mp3-preview/df96e17e8eee60c8b319dd586c14cafa6f6f80bb?cid=052f33d1b1174510bd675c15cceb431f")
+
 #Demos
 
 tim_demo = Demo.create(title: "still falling", user: user_tim)

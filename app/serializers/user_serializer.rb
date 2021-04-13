@@ -6,6 +6,8 @@ class UserSerializer < ActiveModel::Serializer
   # has_many :likers
   # has_many :liked
 
+  has_one :favorite_track
+
   has_many :initiated_conversations
   has_many :received_conversations
 
