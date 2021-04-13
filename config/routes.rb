@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   resources :likes
   resources :demos
   resources :users 
+
+  resources :tracks do
+    collection do
+      get :top_100
+      get :random
+      get :search
+    end
+  end
   
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
