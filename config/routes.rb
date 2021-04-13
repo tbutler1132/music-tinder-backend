@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :likes
   resources :demos
   resources :users 
+  resources :conversations
+
 
   resources :tracks do
     collection do
