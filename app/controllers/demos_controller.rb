@@ -1,5 +1,5 @@
 class DemosController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index]
+    skip_before_action :authorized, only: [:create, :index, :update]
     
     def index
         demos = Demo.all
@@ -13,6 +13,15 @@ class DemosController < ApplicationController
           else
             render json: { error: 'failed to create demo' }, status: :not_acceptable
         end
+    end
+
+    def update
+        demo = Demo.find(params[:id])
+    
+        demo.update(audio_data: params[:audio_data])
+        audio_data_url = rails_blob_path(demo.audio_data)
+
+        render json: {demo: demo, audio_data_url: audio_data_url}
     end
 
     private
