@@ -1,25 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+To run project locally on Mac:
 
-* Ruby version
+Clone both the backend and frontend repos
 
-* System dependencies
+cd into tune-der-backend
 
-* Configuration
+If you do not have rbenv installed, install it
 
-* Database creation
+    check if you have rbenv: $ rbenv -v
+    Install rbenv: $ brew install rbenv
+    
+Install ruby 3.0.2
 
-* Database initialization
+    $ rbenv install 3.0.2
 
-* How to run the test suite
+Run bundle install to install required gems
 
-* Services (job queues, cache servers, search engines, etc.)
+    $ bundle install
+    
+Setup the database
 
-* Deployment instructions
+    $ bundle e rails db:setup
+    $ bundle e rails db:migrate
+    
+Install PostgresSQL if it is not already
 
-* ...
-# music-tinder-backend
+    check if it installed: $ postgres -v
+    Install via Homebrew: $ brew install postgresSQL
+    Start the service: $ brew services start postgresql
+ 
+Run the rails server
+
+    $ bundle e rails s
+    
+cd into Tune-der-frontend
+
+    $ npm install
+    $ npm start
+    
+    
+
+
+    
+
+    
+  
+
+
